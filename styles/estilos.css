@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    position: absolute;
+    background-image: url("img/fondo.jpg");
+    background-position: 50% 0;
+}
+.overlay{
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 100%;
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 500px;
+    height: 300px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 30px 30px;
+    border-radius: 10px;
+}
+.container h2{
+    color: #fff;
+    font-size: 28px;
+    font-family: 'Prosto One', cursive;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.container input{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    height: 35px;
+    width: 80%;
+    font-size: 20px;
+    font-family: 'Forum', cursive;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.container button{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    height: 40px;
+    width: 43%;
+    font-size: 15px;
+    font-family: 'Prosto One', cursive;
+    margin-top: 40px;
+    text-align: center;
+    transition: all .3s;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    color:black;
+}
+@media(max-width:680px){
+    .container{
+        width: 70%;
+    }
+}
+@media(max-width:420px){
+    .container button{
+        font-size: 11px;
+        padding: 0px 0px;
+    }
+    .container input{
+        font-size: 15px;
+    }
+}
