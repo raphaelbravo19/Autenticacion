@@ -108,6 +108,13 @@ button:hover{
     .container{
         width: 70%;
     }
+    .overlay{
+        background-color: rgba(0, 0, 0, .8);
+    }
+    .overlay span{
+        visibility: visible;
+        justify-content: center;
+    }
 }
 @media(max-width:420px){
     .container button{
@@ -115,6 +122,11 @@ button:hover{
         padding: 0px 0px;
     }
     .container input{
+        font-size: 15px;
+    }
+    .overlay span a{
+        margin: 8px;
+        padding: 5px 10px;
         font-size: 15px;
     }
 }
