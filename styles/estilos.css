@@ -6,14 +6,47 @@ body{
     position: absolute;
     background-image: url("../img/fondo.jpg");
     background-position: 50% 0;
+    background-repeat: no-repeat;
 }
 .overlay{
     position: fixed;
     top:0;
     left: 0;
-    background-color: rgba(0, 0, 0, .3);
     width: 100%;
-    height: 100%;
+    height: 80px;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+}
+.overlay span{
+    visibility: hidden;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.overlay span a{
+    transition: visibility .1s, background-color .3s, color .3s, border .3s;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Prosto One', cursive;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.overlay span a:hover{
+    color: black;
+    background-color: rgba(255, 255, 255, .5);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.overlay:hover{
+    background-color: rgba(0, 0, 0, .8);
+}
+.overlay:hover span{
+    transition: all .3s;
+    visibility: visible;
 }
 .container{
     background-color: rgba(0, 0, 0, 0.3);
@@ -39,7 +72,7 @@ body{
     text-align: center;
 }
 .container input{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     height: 35px;
     width: 80%;
@@ -47,8 +80,13 @@ body{
     font-family: 'Forum', cursive;
     margin-top: 30px;
     text-align: center;
+    border: 1px solid black;
+    border-radius: 7px;
 }
-
+input:focus{
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
 .container button{
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
@@ -59,6 +97,8 @@ body{
     margin-top: 40px;
     text-align: center;
     transition: all .3s;
+    cursor: pointer;
+    border-radius: 7px;
 }
 button:hover{
     background-color: rgba(255, 255, 255, 0.8);
@@ -76,5 +116,11 @@ button:hover{
     }
     .container input{
         font-size: 15px;
+    }
+}
+@media(max-height:600px){
+    .container{
+        height: 60%;
+        top:60%;
     }
 }
