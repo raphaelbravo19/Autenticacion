@@ -18,6 +18,7 @@ function ingresar(){
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log("Bienvenido "+correo);
+        window.location.href = "index.html";
         // ...
       });
 }
